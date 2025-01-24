@@ -15,7 +15,7 @@ if [ ! -f ${TMPDIR}/vendor.key ]; then
   openssl x509 -in ${TMPDIR}/vendor.crt -out ${TMPDIR}/vendor.der -outform DER
 fi
 
-if [ ! ${TMPDIR}/shim/shimx64.efi ]; then
+if [ ! -f ${TMPDIR}/shim/shimx64.efi ]; then
   wget -O ${TMPDIR}/shim.tar.bz2 https://github.com/rhboot/shim/releases/download/15.8/shim-15.8.tar.bz2
   mkdir -p ${TMPDIR}/shim
   tar -C ${TMPDIR}/shim -xf ${TMPDIR}/shim.tar.bz2 --strip-component=1
