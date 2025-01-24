@@ -24,3 +24,14 @@ fi
 ![img2](./docs/vm_secure_boot_off.png)
 
 => GOOD /proc/cmdline !!!
+
+# REPRODUCE
+
+```bash
+./start.sh
+```
+
+- start vm
+- see cmdline
+- reset vm & disable secure boot
+- see cmdline
