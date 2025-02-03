@@ -6,7 +6,7 @@ cmdline: [grub.cfg](./grub.cfg)
 search --file --set boot_root /linux.efi
 echo "boot_root: ${boot_root}"
 ls (${boot_root})/
-if chainloader (${boot_root})/linux.efi console=tty1 rdinit=/bin/sh hello=world; then
+if chainloader (${boot_root})/linux.efi console=tty1 hello=world; then
   boot
 else
   echo "FAILED"

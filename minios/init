@@ -1,0 +1,11 @@
+#!/bin/sh
+
+/bin/mount -t proc proc /proc
+
+echo "CMDLINE:"
+cat /proc/cmdline
+echo "===================="
+
+while [ 1 ]; do
+	/bin/sleep 1
+done
